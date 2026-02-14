@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Malefo’s Tech – Tech Solutions</title>
+
+    <style>
+        /* ---------------- Global Styling ---------------- */
+        body {
+            background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #fff;
+        }
+        p{  text-align: center;}
+
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+
+        /* Smooth fade-in animation */
+        .fade-in {
+            animation: fade 5.2s ease-in-out;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ---------------- Section 1 ---------------- */
+        .section1 {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .section1 h1 {
+            color: #ffcc00;
+            font-size: 42px;
+            text-align: center;
+            text-shadow: 0 0 10px #000;
+        }
+        /*.section1  p{  text-align: center;}*/
+
+        .section1 h2, .section1 h3 {
+            color: #ffaa33;
+            text-align: center;
+        }
+
+        /* Center the list */
+        .tech-list-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Technician list box */
+        .section1 ul {
+            list-style: none;
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+
+        /* Technician list items */
+        .section1 ul li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            color: #ffda7a;
+            margin-bottom: 12px;
+        }
+
+        /* Technician images */
+        .section1 ul li img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #ffcc00;
+            box-shadow: 0 0 10px #ffcc00;
+            transition: 0.3s ease;
+        }
+
+        /* Hover animation */
+        .section1 ul li:hover img {
+            transform: scale(1.15);
+            box-shadow: 0 0 18px #ffd74d;
+            border-color: #ffd74d;
+        }
+
+        .section1 button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            margin: 10px 5px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .section1 button:hover {
+            background-color: #1d6fa5;
+            transform: scale(1.07);
+        }
+
+        /* ---------------- Section 2 ---------------- */
+        .section2 {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .section2 h1 {
+            text-align: center;
+            color: #ffcc00;
+            font-size: 38px;
+            text-shadow: 0 0 8px #000;
+        }
+
+        .section2 h2 {
+            color: #ffaa33;
+            margin-top: 10px;
+        }
+
+        .section2 ul {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 25px;
+            border-radius: 12px;
+            color: #ffb347;
+            box-shadow: 0 0 12px rgba(0,0,0,0.3);
+        }
+
+        .section2 p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #e6e6e6;
+            margin-top: 20px;
+        }
+
+        /* Nice dividers */
+        .divider {
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #ffcc00, transparent);
+            margin: 25px 0;
+            border-radius: 50px;
+        }
+        /* ================= NAVIGATION BAR ================= */
+.navbar {
+    background: #111;
+    padding: 15px 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Desktop Menu */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* Hamburger Menu (hidden on desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 28px;
+    height: 3px;
+    background: #ffcc00;
+    border-radius: 3px;
+}
+
+/* ================= MOBILE RESPONSIVE MENU ================= */
+@media (max-width: 768px) {
+
+    /* Hide menu on small screens */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background: #111;
+        width: 200px;
+        padding: 20px;
+        border-radius: 12px;
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .nav-links li {
+        text-align: left;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+<nav class="navbar">
+    <div class="logo">Malefo's Tech</div>
+
+    <!-- Hamburger (mobile menu button) -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="Sabelo2 HTML.html">Technicians</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+
+    <!-- SECTION 1 -->
+    <div class="section1 fade-in">
+        <h1>Hello, Customer</h1>
+        <h2>How can I help you today?</h2>
+
+        <p>Malefo’s Tech provides reliable and affordable technology solutions for individuals and businesses.</p>
+
+        <h3>These are our Technicians:</h3>
+
+        <div class="tech-list-container">
+            <ul>
+                <li>
+                    <img src="images/sg.jpg.jpg" alt="SG Malefo">
+                    SG Malefo
+                </li>
+
+                <li>
+                    <img src="images/lm.jpg" alt="L Magubane">
+                    L Magubane
+                </li>
+
+                <li>
+                    <img src="images/fm.jpg" alt="F Malefo">
+                    F Malefo
+                </li>
+            </ul>
+        </div>
+
+        <p>Life sometimes can get busy and people do not get time to take their devices to repair centers.</p>
+        <p>Malefo’s Tech offers online services and on site services.</p>
+        <p>Just contact us or if you have time you can visit our site.</p>
+        <p>Hope to see you in our store.</p>
+        <h1>SISONKE</h1>
+
+        <h1>Malefo's Tech</h1>
+
+        <button>Click Me!</button>
+        <button>Click Me!</button>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section2 fade-in">
+        <h1>Sabelo's Solutions</h1>
+
+        <div class="divider"></div>
+
+        <h2>Our Services</h2>
+
+        <ul>
+            <li>Software Repairs & Installations</li>
+            <li>Hardware Repairs & Upgrades</li>
+            <li>CCTV Installation & Setup</li>
+        </ul>
+
+        <p>
+            Malefo’s Tech provides reliable and affordable technology solutions for individuals and businesses.
+            We specialize in hardware and software services such as computer repairs, system upgrades, software
+            installations, and troubleshooting. Our company also offers professional CCTV installation and
+            security solutions to help protect homes and businesses. With a strong focus on quality, efficiency,
+            and customer satisfaction, Malefo’s Tech delivers tech support you can always trust.
+        </p>
+          <h1>Software Issue ?</h1>
+        <p>
+            Do not hesitate to contact our trusted office
+            we are sure to providing help on site and online.
+        </p>
+        <ul>
+            <li>Sisanda</li>
+        </ul>
+    </div>
+    <div class="section2 fade-in">
+        <h1>Dyna</h1>
+        <ul>
+            <li>MTHOKO</li>
+            <li>MTHOKO</li>
+            <li>MTHOKO</li>
+            <li>MTHOKO</li>
+        </ul>
+        
+            <p>
+                my name is dyna malefo and iam here to hel you guys today
+                you can just mention what ever you need and i will provide it for you 
+                 i can be also used as a chat Bot my brain are imbedded with a UIP
+            </p>
+      
+    </div>
+</body>
+</html>

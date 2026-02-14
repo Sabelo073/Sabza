@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Technicians – Malefo's Tech</title>
+    <style>
+        /* ---------- Global Styling ---------- */
+        body {
+            background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffcc00;
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #000;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        li {
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 12px;
+            width: 220px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+            color: #ffda7a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s ease;
+        }
+
+        li img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #ffcc00;
+            box-shadow: 0 0 10px #ffcc00;
+            margin-bottom: 10px;
+            transition: 0.3s ease;
+        }
+
+        li:hover img {
+            transform: scale(1.15);
+            border-color: #ffd74d;
+            box-shadow: 0 0 18px #ffd74d;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255,215,77,0.5);
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 600px) {
+            ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            li {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Technicians</h1>
+
+    <ul>
+        <li>
+            <img src="images/sg.jpg.jpg" alt="SG Malefo">
+            SG Malefo
+        </li>
+        <li>
+            <img src="images/lm.jpg" alt="L Magubane">
+            L Magubane
+        </li>
+        <li>
+            <img src="images/fm.jpg" alt="F Malefo">
+            F Malefo
+        </li>
+    </ul>
+    <h2>Their Contacts:</h2>
+    <ul>
+        <li>SG Malefo: 073 293 5912
+            sabelomalefo27@gmail.com
+        </li>
+
+          <li>L Magubane: 073 293 5912
+              Lindelamagubene13@gmail.com
+        </li>
+
+              <li>F Malefo: 079 415 8078
+                  Fihliwemalefo14@gmail.com
+        </li>
+    </ul>
+</body>
+</html>
